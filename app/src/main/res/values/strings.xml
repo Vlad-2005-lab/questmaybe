@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Лучшая игра в мире</string>
+    <string name="t1">Лаве:</string>
+    <string name="t2">Количесвто магазов:</string>
+    <string name="t3">Репутация:</string>
+    <string name="his">История:</string>
+    <string name="day">День:</string>
+    <string name="buy_shop">Купить магазин</string>
+</resources>

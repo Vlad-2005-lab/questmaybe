@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lave"
+        android:layout_width="104dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:text="@string/t1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginLeft="10dp"
+        tools:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/magaz"
+        android:layout_width="142dp"
+        android:layout_height="80dp"
+        android:gravity="start"
+        android:text="@string/t2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/lave"
+        app:layout_constraintTop_toTopOf="@+id/lave" />
+
+    <TextView
+        android:id="@+id/rep"
+        android:layout_width="124dp"
+        android:layout_height="80dp"
+        android:gravity="start"
+        android:text="@string/t3"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/magaz"
+        app:layout_constraintTop_toTopOf="@+id/magaz" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="372dp"
+        android:layout_height="440dp"
+        android:text="@string/his"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/lave"
+        app:layout_constraintTop_toBottomOf="@+id/day"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/history"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <Button
+        android:id="@+id/prodat"
+        android:layout_width="164dp"
+        android:layout_height="43dp"
+        android:onClick="sell"
+        android:text="Продать"
+        app:layout_constraintBottom_toBottomOf="@+id/cost"
+        app:layout_constraintEnd_toEndOf="@+id/history"
+        app:layout_constraintStart_toEndOf="@+id/cost"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <Button
+        android:id="@+id/kupit_magaz"
+        android:layout_width="260dp"
+        android:layout_height="61dp"
+        android:onClick="kupit_magaz"
+        android:text="@string/buy_shop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/prodat"
+        app:layout_constraintStart_toStartOf="@+id/cost"
+        app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:text="@string/day"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/rep"
+        app:layout_constraintStart_toStartOf="@+id/lave"
+        app:layout_constraintTop_toBottomOf="@+id/magaz" />
+</androidx.constraintlayout.widget.ConstraintLayout>
