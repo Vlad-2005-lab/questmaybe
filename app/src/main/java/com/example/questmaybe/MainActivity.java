@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         return (int) (Math.random() * ((max - min) + 1)) + min;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         update();
     }
 
+    @SuppressLint("SetTextI18n")
     public void update() {
         day++;
         TextView new_t1 = (TextView) findViewById(R.id.lave);
@@ -59,13 +61,14 @@ public class MainActivity extends AppCompatActivity {
         new_t4.setText("День: " + day);
     }
 
+    @SuppressLint("SetTextI18n")
     public void sell(View v) {
         money -= 90 * magaz;
         TextView history = (TextView) findViewById(R.id.history);
         EditText hz = (EditText) findViewById(R.id.cost);
         String l = hz.getText().toString();
         hz.setText("");
-        double c = Integer.parseInt(l);
+        double c = Double.parseDouble(l);
         int cost = (int)(c / 1);
         if (cost > 500) {
             history.setText("История:\n" +
