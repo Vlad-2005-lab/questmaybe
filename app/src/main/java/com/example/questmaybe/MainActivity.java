@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
         EditText hz = (EditText) findViewById(R.id.cost);
         String l = hz.getText().toString();
         hz.setText("");
-        int cost = Integer.parseInt(l);
+        double c = Integer.parseInt(l);
+        int cost = (int)(c / 1);
         if (cost > 500) {
             history.setText("История:\n" +
                     "Ответ покупателя:\n    Неееееееееее, слишком дорого.\n" +
